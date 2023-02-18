@@ -19,7 +19,6 @@ from routine import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('routine/', include('routine.urls')), 
-    path('common/', include('common.urls')), 
-    path('', views.index, name='index'),
+    path("", include('routine.urls')), 
+    path("", include("allauth.urls")),
 ]
